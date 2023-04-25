@@ -11,13 +11,13 @@ public class SocketTest {
     @Test
     public void deveRetornarPlacamaes() {
         Socket socket = new Socket();
-        socket.registrar("Asus", "Celeron G1820", "Haswell");
+        socket.registrar("Asus", "Core i3 4160", "Haswell");
         socket.registrar("Asus", "Celeron G1820", "Haswell");
         socket.registrar("Gigabyte", "Core i5-4440", "Haswell");
         socket.registrar("Foxconn", "Core i7-4790", "Haswell");
 
         List<String> saida = Arrays.asList(
-                "Placamae{nome='Asus', nomeProcessador='Celeron G1820', arquitetura='Haswell'}",
+                "Placamae{nome='Asus', nomeProcessador='Core i3 4160', arquitetura='Haswell'}",
                 "Placamae{nome='Asus', nomeProcessador='Celeron G1820', arquitetura='Haswell'}",
                 "Placamae{nome='Gigabyte', nomeProcessador='Core i5-4440', arquitetura='Haswell'}",
                 "Placamae{nome='Foxconn', nomeProcessador='Core i7-4790', arquitetura='Haswell'}");
@@ -28,13 +28,13 @@ public class SocketTest {
     }
 
     @Test
-    public void deveRetornarTotalCidades() {
+    public void deveRetornarTotalPlacas() {
         Socket socket = new Socket();
-        socket.registrar("Asus", "Celeron G1820", "Haswell");
+        socket.registrar("Asus", "Core i3 4160", "Haswell");
         socket.registrar("Asus", "Celeron G1820", "Haswell");
         socket.registrar("Gigabyte", "Core i5-4440", "Haswell");
-        socket.registrar("Foxconn", "i7-4790", "Haswell");
+        socket.registrar("Foxconn", "Core i7-4790", "Haswell");
 
-        assertEquals(3, ProcessadorFactory.getTotalProcessadores());
+        assertEquals(4, ProcessadorFactory.getTotalProcessadores());
     }
 }
